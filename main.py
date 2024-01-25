@@ -17,7 +17,10 @@ autores_raw = soup.select('.author')
 autores = []
 
 for author in autores_raw:
-    autores.append(author.getText())
+
+    if author.getText() not in autores:
+
+        autores.append(author.getText())
     #autores.append(autores_raw[author])
 
 #imprimimos los nombres de los autores de la primera pagina
